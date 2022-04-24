@@ -1,4 +1,4 @@
-# Stack_Adventures
+# Stack-Adventures
 
 ## Our Goal:
 >### Make learning data structures more fun (with "Rebo" the robot!).
