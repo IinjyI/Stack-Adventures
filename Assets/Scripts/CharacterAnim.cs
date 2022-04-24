@@ -16,5 +16,7 @@ public class CharacterAnim : MonoBehaviour
     {
         anim.SetBool("RunningDown", Input.GetAxisRaw("Vertical") == -1);
         anim.SetBool("RunningUp", Input.GetAxisRaw("Vertical") == 1);
+        anim.SetBool("RunningRight", Input.GetAxisRaw("Horizontal") == 1);
+        anim.SetBool("RunningLeft", Input.GetAxisRaw("Horizontal") == -1);
     }
 }
