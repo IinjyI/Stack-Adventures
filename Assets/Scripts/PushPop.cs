@@ -12,6 +12,7 @@ public class PushPop : MonoBehaviour
     void Start()
     {
         playerInventory = GetComponent<Inventory>();
+        gameObject.transform.GetChild(2).gameObject.SetActive(false);
     }
 
     void Update()
@@ -77,8 +78,7 @@ public class PushPop : MonoBehaviour
             workingStack = collision.gameObject;
             stackInventory = workingStack.GetComponent<Inventory>();
             workingStack.GetComponent<Inventory>().attatchedInventory.SetActive(true);
-            gameObject.transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
-            gameObject.transform.GetChild(0).transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(true);
+            gameObject.transform.GetChild(2).gameObject.SetActive(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -86,8 +86,7 @@ public class PushPop : MonoBehaviour
         if (collision.CompareTag("Stack"))
         {
             workingStack.GetComponent<Inventory>().attatchedInventory.SetActive(false);
-            gameObject.transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
-            gameObject.transform.GetChild(0).transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(false);
+            gameObject.transform.GetChild(2).gameObject.SetActive(false);
             workingStack = null;
             stackInventory = null;
         }
