@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-   [SerializeField] private Transform prevRoom;
-   [SerializeField] private Transform nextRoom;
+   [SerializeField] private Transform entryLevel;
+   [SerializeField] private Transform mainLevel;
    [SerializeField] private CameraController camera;
 
    private void OnTriggerEnter2D(Collider2D collision){
@@ -13,11 +13,11 @@ public class Door : MonoBehaviour
        {
            if (collision.transform.position.y>transform.position.y)
            {
-               camera.moveToRoom(nextRoom);
+               camera.moveToRoom(entryLevel);
            }
-           else
+           else if(collision.transform.position.y<transform.position.y)
            {
-               camera.moveToRoom(prevRoom);
+               camera.moveToRoom(mainLevel);
            }
        }
    }

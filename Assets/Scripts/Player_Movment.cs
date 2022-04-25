@@ -13,7 +13,7 @@ public class Player_Movment : MonoBehaviour
     }
     void Update()
     {
-        // Getting Movments Input
+        // Getting Movements Input for every frame
         movment.x = Input.GetAxisRaw("Horizontal");
         movment.y = Input.GetAxisRaw("Vertical");
         movment = movment.normalized;
@@ -22,5 +22,6 @@ public class Player_Movment : MonoBehaviour
     {
         // Updating Postion
         rb.velocity = new Vector2(movment.x * moveSpeed, movment.y * moveSpeed);
+       
     }
 }
