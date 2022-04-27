@@ -1048,7 +1048,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &509578300
 Animator:
@@ -1160,6 +1160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef462cf4d5180814d99772524162b3a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pushSound: {fileID: 0}
+  popSound: {fileID: 0}
 --- !u!1 &516536089
 GameObject:
   m_ObjectHideFlags: 0
@@ -27721,7 +27723,7 @@ Transform:
   - {fileID: 59437316}
   - {fileID: 107343336}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1266387255
 GameObject:

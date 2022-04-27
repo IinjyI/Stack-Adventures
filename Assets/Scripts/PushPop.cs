@@ -6,6 +6,7 @@ public class PushPop : MonoBehaviour
 {
     private Inventory playerInventory;
     private Inventory stackInventory;
+    [SerializeField] public AudioSource pushSound, popSound;
     private void Start()
     {
         playerInventory = GetComponent<Inventory>();
@@ -33,6 +34,7 @@ public class PushPop : MonoBehaviour
             Destroy(item.gameObject);
             // Adding the item to the Target stack inventory, Removing it from the player's inventory
             stackInventory.items.Push(playerInventory.items.Pop());
+            pushSound.Play();
         }
     }
     private void PopItem()
@@ -47,6 +49,7 @@ public class PushPop : MonoBehaviour
             Destroy(item.gameObject);
             // Adding the item to the player's inventory, Removing it from the Target stack's inventory
             playerInventory.items.Push(stackInventory.items.Pop());
+            popSound.Play();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
