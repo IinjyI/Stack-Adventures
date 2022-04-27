@@ -12,11 +12,11 @@ public class PushPop : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && stackInventory != null)
         {
             PopItem();
         }
-        else if (Input.GetKeyDown(KeyCode.E))
+        else if (Input.GetKeyDown(KeyCode.E) && stackInventory != null)
         {
             PushItem();
         }
@@ -53,5 +53,11 @@ public class PushPop : MonoBehaviour
     {
         // Getting nearest stack object to interact with
         stackInventory = collision.GetComponent<Inventory>();
+        collision.GetComponent<Inventory>().stackUI.SetActive(true);
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        collision.GetComponent<Inventory>().stackUI.SetActive(false);
+        stackInventory = null;
     }
 }
