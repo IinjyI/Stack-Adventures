@@ -54,13 +54,19 @@ public class PushPop : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Getting nearest stack object to interact with
-        stackInventory = collision.GetComponent<Inventory>();
-        collision.GetComponent<Inventory>().stackUI.SetActive(true);
+        if (collision.CompareTag("Stack"))
+        {
+            // Getting nearest stack object to interact with
+            stackInventory = collision.GetComponent<Inventory>();
+            collision.GetComponent<Inventory>().stackUI.SetActive(true);
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        collision.GetComponent<Inventory>().stackUI.SetActive(false);
-        stackInventory = null;
+        if (collision.CompareTag("Stack"))
+        {
+            collision.GetComponent<Inventory>().stackUI.SetActive(false);
+            stackInventory = null;
+        }
     }
 }
