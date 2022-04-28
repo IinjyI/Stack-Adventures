@@ -16,4 +16,10 @@ private Vector3 bugVelocity= Vector3.zero;
              ref bugVelocity,
              bugSpeed);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision){
+         if(collision.gameObject.name=="Door"){
+            gameObject.SetActive(false);
+        }
+    }
 }
