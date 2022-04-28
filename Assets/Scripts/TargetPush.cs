@@ -29,6 +29,7 @@ public class TargetPush : MonoBehaviour
             sucessPush.Play();
             objetivesUI.GetChild(objectiveIndex).Find("CheckMark").gameObject.SetActive(true);
             objectiveIndex++;
+            playerInventory.items.Pop();
         }
         else
         {
