@@ -8,6 +8,8 @@ TagManager:
   - EntryRoom
   - MainRoom
   - TargetStack
+  - Door
+  - Bug
   layers:
   - Default
   - TransparentFX
