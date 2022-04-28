@@ -7,7 +7,8 @@ public class Door : MonoBehaviour
    [SerializeField] private Transform entryLevel;
    [SerializeField] private Transform mainLevel;
    [SerializeField] private CameraController camera;
-
+   [SerializeField] private Transform Bug;
+private Vector3 bugVelocity= Vector3.zero;  
    private void OnTriggerEnter2D(Collider2D collision){
        if (collision.tag == "Player")
        {
@@ -18,7 +19,10 @@ public class Door : MonoBehaviour
            else if(collision.transform.position.y<transform.position.y)
            {
                camera.moveToRoom(mainLevel);
+
            }
        }
+    
+     }
    }
-}
+
