@@ -1,13 +1,16 @@
+using System.Collections;
+using UnityEngine;
+
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] Transform player;
-    public Vector3 mainLvlMinPosition;
-    public Vector3 entryLvlMinPosition;
-    public Vector3 mainLvlMaxPosition;
-    public Vector3 entryLvlMaxPosition;
-    public Vector3 minPosition;
-    public Vector3 maxPosition;
+    public Vector2 mainLvlMinPosition;
+    public Vector2 entryLvlMinPosition;
+    public Vector2 mainLvlMaxPosition;
+    public Vector2 entryLvlMaxPosition;
+    public Vector2 minPosition;
+    public Vector2 maxPosition;
     private Vector3 velocity = Vector3.zero;
     public float doorYaxis;
     private void Update()
