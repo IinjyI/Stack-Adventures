@@ -1140,7 +1140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509578292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2, y: -11, z: 0}
+  m_LocalPosition: {x: -12.08, y: -25.18, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1579,7 +1579,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: -9.61, z: -10}
+  m_LocalPosition: {x: -28.07, y: -27.95, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1600,6 +1600,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   player: {fileID: 509578296}
+  mainLvlMinPosition: {x: -2.55, y: 0.02}
+  entryLvlMinPosition: {x: -27.93, y: -27.95}
+  mainLvlMaxPosition: {x: 2.35, y: 0.02}
+  entryLvlMaxPosition: {x: 27.73, y: -13.75}
+  minPosition: {x: 0, y: 0}
+  maxPosition: {x: 0, y: 0}
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27583,7 +27589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078542287}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.49, y: -13.5, z: 0}
+  m_LocalPosition: {x: -3.49, y: -28.63, z: 0}
   m_LocalScale: {x: 0.46218035, y: 0.48185852, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29023,10 +29029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef38e4ee68bffaa4c998c00f64096c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entryLevel: {fileID: 913043555}
-  mainLevel: {fileID: 384837374}
   camera: {fileID: 519420033}
-  Bug: {fileID: 1078542290}
 --- !u!61 &2129253897
 BoxCollider2D:
   m_ObjectHideFlags: 0
