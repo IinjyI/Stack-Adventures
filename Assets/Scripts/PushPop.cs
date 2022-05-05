@@ -41,15 +41,22 @@ public class PushPop : MonoBehaviour
     {
         if (playerInventory.items.Count == 0)
         {
-            // Item to pop from the Target stack
-            var item = stackInventory.stackUI.transform.GetChild(stackInventory.items.Count - 1);
-            // Instantiate the item to the player's UI
-            Instantiate(item, playerInventory.stackUI.transform);
-            // Destroying the item from the stack's UI
-            Destroy(item.gameObject);
-            // Adding the item to the player's inventory, Removing it from the Target stack's inventory
-            playerInventory.items.Push(stackInventory.items.Pop());
-            popSound.Play();
+            if (stackInventory.items.Count > 0)
+            {
+                // Item to pop from the Target stack
+                var item = stackInventory.stackUI.transform.GetChild(stackInventory.items.Count - 1);
+                // Instantiate the item to the player's UI
+                Instantiate(item, playerInventory.stackUI.transform);
+                // Destroying the item from the stack's UI
+                Destroy(item.gameObject);
+                // Adding the item to the player's inventory, Removing it from the Target stack's inventory
+                playerInventory.items.Push(stackInventory.items.Pop());
+                popSound.Play();
+            }
+            else
+            {
+                // Action to do if pop from empty stack
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

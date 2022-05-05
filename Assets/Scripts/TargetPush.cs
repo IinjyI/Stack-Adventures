@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TargetPush : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class TargetPush : MonoBehaviour
         {
             Destroy(playerInventory.stackUI.transform.GetChild(playerInventory.items.Count - 1).gameObject);
             sucessPush.Play();
-            objetivesUI.GetChild(objectiveIndex).Find("CheckMark").gameObject.SetActive(true);
+            objetivesUI.GetChild(objectiveIndex).Find("Toggle").transform.GetComponent<Toggle>().isOn = true;
             objectiveIndex++;
             playerInventory.items.Pop();
         }
