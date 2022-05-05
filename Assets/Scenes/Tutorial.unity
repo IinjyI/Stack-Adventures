@@ -27273,10 +27273,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   player: {fileID: 1420619930}
-  mainLvlMinPosition: {x: -2.55, y: 0.02}
-  entryLvlMinPosition: {x: -24, y: -25}
-  mainLvlMaxPosition: {x: 2.35, y: 0.02}
-  entryLvlMaxPosition: {x: 24, y: -17}
+  mainLvlMinPosition: {x: -555, y: -555}
+  entryLvlMinPosition: {x: -555, y: -555}
+  mainLvlMaxPosition: {x: 555, y: 555}
+  entryLvlMaxPosition: {x: 555, y: 555}
   minPosition: {x: 0, y: 0}
   maxPosition: {x: 0, y: 0}
   doorYaxis: -6.94
