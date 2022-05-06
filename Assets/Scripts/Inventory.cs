@@ -1,21 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public GameObject attatchedInventory;
-    public List<GameObject> items;
-    public List<bool> isFull;
-    void Start()
+    public GameObject stackUI;
+    public Stack<Item> items;
+    private void Start()
     {
-
+        items = new Stack<Item>();
+        foreach(Transform item in stackUI.transform)
+        {
+            items.Push(item.GetComponent<Item>());
+        }
     }
-
-    void Update()
-    {
-        
-    }
-    
 }

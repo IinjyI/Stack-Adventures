@@ -5,18 +5,20 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private float speed;
-    private float currentPosY;
+    [SerializeField] Transform player;
     private Vector3 velocity = Vector3.zero;
-    
-    private void Update(){
-        transform.position = Vector3.SmoothDamp(transform.position, 
-        new Vector3(transform.position.x,
-            currentPosY, transform.position.z),
+
+    private void Update()
+    {
+        transform.position = Vector3.SmoothDamp(transform.position,
+        new Vector3(player.position.x,
+            player.position.y, transform.position.z),
          ref velocity, speed);
-         
+
     }
-    public void moveToRoom(Transform _newRoom){
-        currentPosY= _newRoom.position.y;
+    public void moveToRoom(Transform _newRoom)
+    {
+        float currentPosY = _newRoom.position.y;
 
     }
 }
