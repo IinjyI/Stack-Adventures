@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-
-   [SerializeField] private CameraController camera;
-
-    private Vector3 bugVelocity= Vector3.zero;  
-    
-    private void OnTriggerEnter2D(Collider2D collision){
-       if (collision.tag == "Player")
-       {
-          
-       }
-       
-     }
-   }
+    bool isOpen = false;
+    void Update()
+    {
+        if (isOpen)
+        {
+            GetComponent<Collider2D>().enabled = true;
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collison)
+    {
+        isOpen = false;
+    }
+}
 
