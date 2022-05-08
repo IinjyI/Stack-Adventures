@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject[] tutorialPopUps;
+    public int popUpIndx;
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        for(int i=0;i<tutorialPopUps.Length;i++)
+        {
+            if(i==popUpIndx)
+            {
+                tutorialPopUps[i].SetActive(true);
+            }
+            else
+            {
+                tutorialPopUps[i].SetActive(false);
+            }
+        }
     }
 }
