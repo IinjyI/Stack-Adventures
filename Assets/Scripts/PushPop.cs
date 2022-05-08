@@ -66,6 +66,7 @@ public class PushPop : MonoBehaviour
             // Getting nearest stack object to interact with
             stackInventory = collision.GetComponent<Inventory>();
             collision.transform.Find("UICanvas").GetComponent<Canvas>().enabled = true;
+            transform.Find("UICanvas").GetComponent<Canvas>().enabled = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -73,6 +74,7 @@ public class PushPop : MonoBehaviour
         if (collision.CompareTag("Stack"))
         {
             collision.transform.Find("UICanvas").GetComponent<Canvas>().enabled = false;
+            transform.Find("UICanvas").GetComponent<Canvas>().enabled = false;
             stackInventory = null;
         }
     }
