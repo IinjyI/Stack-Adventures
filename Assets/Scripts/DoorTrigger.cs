@@ -6,6 +6,7 @@ public class DoorTrigger : MonoBehaviour
 {
     [SerializeField] DoorSetActive door;
     [SerializeField] Inventory targetStackInventory;
+    bool isTriggerd;
     public TriggerId triggerId;
     public enum TriggerId
     {
@@ -18,35 +19,39 @@ public class DoorTrigger : MonoBehaviour
     {
         if (triggerId == TriggerId.secondDoor)
         {
-            if (targetStackInventory.items.Count == 0)
+            if (targetStackInventory.items.Count == 0 && !isTriggerd)
             {
                 door.OpenDoor();
                 TutorialManager.instance.popUpIndx++;
+                isTriggerd = true;
             }
         }
         else if (triggerId == TriggerId.thirdDoor)
         {
-            if (targetStackInventory.items.Count == 1)
+            if (targetStackInventory.items.Count == 1 && !isTriggerd)
             {
                 door.OpenDoor();
                 TutorialManager.instance.popUpIndx++;
+                isTriggerd = true;
             }
         }
         else if (triggerId == TriggerId.fourthDoor)
         {
-            if (targetStackInventory.items.Count == 1)
+            if (targetStackInventory.items.Count == 1 && !isTriggerd)
             {
                 door.OpenDoor();
                 TutorialManager.instance.popUpIndx++;
+                isTriggerd = true;
             }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (triggerId == TriggerId.firstDoor)
+        if (triggerId == TriggerId.firstDoor && !isTriggerd)
         {
             door.OpenDoor();
             TutorialManager.instance.popUpIndx++;
+            isTriggerd = true;
         }
     }
 }
