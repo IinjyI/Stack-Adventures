@@ -21,6 +21,7 @@ public class DoorTrigger : MonoBehaviour
             if (targetStackInventory.items.Count == 0)
             {
                 door.OpenDoor();
+                TutorialManager.instance.popUpIndx++;
             }
         }
         else if (triggerId == TriggerId.thirdDoor)
@@ -28,6 +29,7 @@ public class DoorTrigger : MonoBehaviour
             if (targetStackInventory.items.Count == 1)
             {
                 door.OpenDoor();
+                TutorialManager.instance.popUpIndx++;
             }
         }
         else if (triggerId == TriggerId.fourthDoor)
@@ -35,6 +37,7 @@ public class DoorTrigger : MonoBehaviour
             if (targetStackInventory.items.Count == 1)
             {
                 door.OpenDoor();
+                TutorialManager.instance.popUpIndx++;
             }
         }
     }
@@ -43,6 +46,7 @@ public class DoorTrigger : MonoBehaviour
         if (triggerId == TriggerId.firstDoor)
         {
             door.OpenDoor();
+            TutorialManager.instance.popUpIndx++;
         }
     }
 }
