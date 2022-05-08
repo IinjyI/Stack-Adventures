@@ -5,8 +5,8 @@ using UnityEngine;
 public class DoorTrigger : MonoBehaviour
 {
     [SerializeField] DoorSetActive door;
+    [SerializeField] Inventory targetStackInventory;
     public TriggerId triggerId;
-    bool inRange = false;
     public enum TriggerId
     {
         firstDoor,
@@ -16,17 +16,26 @@ public class DoorTrigger : MonoBehaviour
     }
     private void Update()
     {
-        if (inRange)
+        if (triggerId == TriggerId.secondDoor)
         {
-            if (triggerId == TriggerId.secondDoor && Input.GetKeyDown(KeyCode.Q))
-            { 
-                door.OpenDoor();
-            }
-            else if (triggerId == TriggerId.thirdDoor && Input.GetKeyDown(KeyCode.E))
+            if (targetStackInventory.items.Count == 0)
             {
                 door.OpenDoor();
-            } 
-
+            }
+        }
+        else if (triggerId == TriggerId.thirdDoor)
+        {
+            if (targetStackInventory.items.Count == 1)
+            {
+                door.OpenDoor();
+            }
+        }
+        else if (triggerId == TriggerId.fourthDoor)
+        {
+            if (targetStackInventory.items.Count == 1)
+            {
+                door.OpenDoor();
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,17 +43,6 @@ public class DoorTrigger : MonoBehaviour
         if (triggerId == TriggerId.firstDoor)
         {
             door.OpenDoor();
-        }
-        else if (triggerId == TriggerId.secondDoor || triggerId == TriggerId.thirdDoor)
-        {
-            inRange = true;
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (triggerId == TriggerId.secondDoor || triggerId == TriggerId.thirdDoor)
-        {
-            inRange = false;
         }
     }
 }
