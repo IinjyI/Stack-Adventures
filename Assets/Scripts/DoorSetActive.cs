@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class DoorSetActive : MonoBehaviour
 {
+    private PlatformEffector2D oneWayCollider;
+    private Animator anim;
+    private void Awake()
+    {
+        oneWayCollider = GetComponent<PlatformEffector2D>();
+        anim = GetComponent<Animator>();
+    }
     public void OpenDoor()
     {
-        gameObject.SetActive(false);
+        oneWayCollider.enabled = true;
+        anim.SetBool("IsOpen", true);
     }
     public void CloseDoor()
     {
-        gameObject.SetActive(true);
+        oneWayCollider.enabled = false;
+        anim.SetBool("IsOpen", false);
     }
 }
