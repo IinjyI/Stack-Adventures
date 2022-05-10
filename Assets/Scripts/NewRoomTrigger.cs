@@ -21,6 +21,7 @@ public class NewRoomTrigger : MonoBehaviour
         if (!isTrigger)
         {
             previousDoor.CloseDoor();
+            GetComponent<DialogueTrigger>().TriggerDialogue();
             TutorialManager.instance.popUpIndx++;
             if (roomId == RoomId.firstRoom)
             {
