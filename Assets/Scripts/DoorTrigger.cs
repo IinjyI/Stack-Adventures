@@ -7,8 +7,8 @@ public class DoorTrigger : MonoBehaviour
     [SerializeField] DoorSetActive door;
     [SerializeField] Inventory targetStackInventory;
     bool isTriggerd;
-    public TriggerId triggerId;
-    public enum TriggerId
+    public DoorId doorId;
+    public enum DoorId
     {
         firstDoor,
         secondDoor,
@@ -17,27 +17,27 @@ public class DoorTrigger : MonoBehaviour
     }
     private void Update()
     {
-        if (triggerId == TriggerId.secondDoor)
+        if (doorId == DoorId.secondDoor)
         {
-            if (targetStackInventory.items.Count == 0 && !isTriggerd)
+            if (targetStackInventory.currentSlot == 0 && !isTriggerd)
             {
                 door.OpenDoor();
                 TutorialManager.instance.popUpIndx++;
                 isTriggerd = true;
             }
         }
-        else if (triggerId == TriggerId.thirdDoor)
+        else if (doorId == DoorId.thirdDoor)
         {
-            if (targetStackInventory.items.Count == 1 && !isTriggerd)
+            if (targetStackInventory.currentSlot == 1 && !isTriggerd)
             {
                 door.OpenDoor();
                 TutorialManager.instance.popUpIndx++;
                 isTriggerd = true;
             }
         }
-        else if (triggerId == TriggerId.fourthDoor)
+        else if (doorId == DoorId.fourthDoor)
         {
-            if (targetStackInventory.items.Count == 1 && !isTriggerd)
+            if (targetStackInventory.currentSlot == 2 && !isTriggerd)
             {
                 door.OpenDoor();
                 TutorialManager.instance.popUpIndx++;
@@ -47,10 +47,10 @@ public class DoorTrigger : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (triggerId == TriggerId.firstDoor && !isTriggerd)
+        if (doorId == DoorId.firstDoor && !isTriggerd)
         {
             door.OpenDoor();
-            TutorialManager.instance.popUpIndx++;
+            //TutorialManager.instance.popUpIndx++;
             isTriggerd = true;
         }
     }

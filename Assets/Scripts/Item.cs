@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public string itemName;
+    public ItemColor itemColor;
+    public enum ItemColor{
+        Blue,
+        DarkBlue,
+        Green,
+        Gery,
+        Orange,
+        Purple,
+        Red,
+        Yellow,
+    }
     public Sprite icon;
 }
