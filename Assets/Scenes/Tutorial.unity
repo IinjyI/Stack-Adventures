@@ -15807,6 +15807,7 @@ GameObject:
   - component: {fileID: 149978942}
   - component: {fileID: 149978941}
   - component: {fileID: 149978940}
+  - component: {fileID: 149978943}
   m_Layer: 0
   m_Name: NewRoom 04
   m_TagString: Untagged
@@ -15822,8 +15823,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149978938}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.05, y: 16.37, z: 0}
-  m_LocalScale: {x: 3.9402678, y: 1.303831, z: 1}
+  m_LocalPosition: {x: -24.0264, y: 18.37, z: 0}
+  m_LocalScale: {x: 5.823366, y: 1.303831, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 242038924}
@@ -15922,6 +15923,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &149978943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149978938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e40c302f0967354a9db5b26d2b84f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: testing
+    sentences:
+    - Hello there
+    - HI every one
+    - end of conversation
 --- !u!1 &155645198
 GameObject:
   m_ObjectHideFlags: 0
@@ -16538,7 +16557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &288765839
 Transform:
   m_ObjectHideFlags: 0
@@ -18473,7 +18492,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b97373436b55d2540bae5898430b41b4, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -18854,7 +18873,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611686124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.15, y: 10.38, z: 0}
+  m_LocalPosition: {x: 18.96, y: 10.38, z: 0}
   m_LocalScale: {x: 3.4155195, y: 4.482398, z: 0.8754}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19704,8 +19723,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795755246}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 0.7, z: 0}
-  m_LocalScale: {x: 2.9971, y: 1.150691, z: 1}
+  m_LocalPosition: {x: -0.0459, y: 1.72, z: 0}
+  m_LocalScale: {x: 6.032046, y: 1.150691, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 242038924}
@@ -42644,6 +42663,7 @@ GameObject:
   - component: {fileID: 1839579886}
   - component: {fileID: 1839579885}
   - component: {fileID: 1839579884}
+  - component: {fileID: 1839579887}
   m_Layer: 0
   m_Name: NewRoom 03
   m_TagString: Untagged
@@ -42659,8 +42679,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839579882}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.55, y: 5.82, z: 0}
-  m_LocalScale: {x: 1.5992526, y: 3.757438, z: 1}
+  m_LocalPosition: {x: -17.85, y: 5.82, z: 0}
+  m_LocalScale: {x: 1.5992526, y: 5.2463818, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 242038924}
@@ -42759,6 +42779,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1839579887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839579882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e40c302f0967354a9db5b26d2b84f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: testing
+    sentences:
+    - Hello there
+    - HI every one
+    - end of conversation
 --- !u!1 &1889852267
 GameObject:
   m_ObjectHideFlags: 0
