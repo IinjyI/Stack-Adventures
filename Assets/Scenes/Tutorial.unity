@@ -17399,7 +17399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 2075467320}
   targetStackInventory: {fileID: 2056421356}
-  doorId: 0
+  doorId: 2
 --- !u!61 &437303150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19446,7 +19446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1734183149}
   targetStackInventory: {fileID: 894225045}
-  doorId: 0
+  doorId: 3
 --- !u!61 &750813913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20889,7 +20889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 2023264223}
   targetStackInventory: {fileID: 1895236127}
-  doorId: 0
+  doorId: 1
 --- !u!61 &1035685913
 BoxCollider2D:
   m_ObjectHideFlags: 0
