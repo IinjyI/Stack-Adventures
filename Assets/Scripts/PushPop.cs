@@ -27,28 +27,32 @@ public class PushPop : MonoBehaviour
         if (playerInventory.items.Count > 0)
         {
             // Item to push into the Target stack
-            var item = playerInventory.stackUI.transform.GetChild(playerInventory.items.Count - 1);
+            var item = playerInventory.stackUI.transform.GetChild(playerInventory.currentSlot-1).transform.GetChild(0);
             // Instantiate the item to the Target stack's UI
-            Instantiate(item, stackInventory.stackUI.transform);
+            Instantiate(item, stackInventory.stackUI.transform.GetChild(stackInventory.currentSlot));
+            stackInventory.currentSlot++;
             // Destroying the item from the player's UI
             Destroy(item.gameObject);
+            playerInventory.currentSlot--;
             // Adding the item to the Target stack inventory, Removing it from the player's inventory
             stackInventory.items.Push(playerInventory.items.Pop());
             pushSound.Play();
         }
     }
     private void PopItem()
-    {
+    {   
         if (playerInventory.items.Count == 0)
         {
             if (stackInventory.items.Count > 0)
             {
                 // Item to pop from the Target stack
-                var item = stackInventory.stackUI.transform.GetChild(stackInventory.items.Count - 1);
+                var item = stackInventory.stackUI.transform.GetChild(stackInventory.currentSlot-1).transform.GetChild(0);
                 // Instantiate the item to the player's UI
-                Instantiate(item, playerInventory.stackUI.transform);
+                Instantiate(item, playerInventory.stackUI.transform.GetChild(playerInventory.currentSlot));
+                stackInventory.currentSlot--;
                 // Destroying the item from the stack's UI
                 Destroy(item.gameObject);
+                playerInventory.currentSlot++;
                 // Adding the item to the player's inventory, Removing it from the Target stack's inventory
                 playerInventory.items.Push(stackInventory.items.Pop());
                 popSound.Play();
