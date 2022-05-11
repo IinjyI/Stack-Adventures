@@ -19,9 +19,10 @@ public class DoorTrigger : MonoBehaviour
     {
         if (doorId == DoorId.secondDoor)
         {
-            if (targetStackInventory.currentSlot == 0 && !isTriggerd)
+            if (targetStackInventory.currentSlot == 4 && !isTriggerd)
             {
                 door.OpenDoor();
+                GetComponent<DialogueTrigger>().TriggerDialogue();
                 TutorialManager.instance.objectiveIndx++;
                 TutorialManager.instance.hintArrows.transform.Find("arrow 01").gameObject.SetActive(false);
                 isTriggerd = true;
@@ -29,9 +30,10 @@ public class DoorTrigger : MonoBehaviour
         }
         else if (doorId == DoorId.thirdDoor)
         {
-            if (targetStackInventory.currentSlot == 1 && !isTriggerd)
+            if (targetStackInventory.currentSlot == 5 && !isTriggerd)
             {
                 door.OpenDoor();
+                GetComponent<DialogueTrigger>().TriggerDialogue();
                 TutorialManager.instance.objectiveIndx++;
                 TutorialManager.instance.hintArrows.transform.Find("arrow 02").gameObject.SetActive(false);
                 isTriggerd = true;
@@ -43,6 +45,7 @@ public class DoorTrigger : MonoBehaviour
             {
                 door.OpenDoor();
                 TutorialManager.instance.objectiveIndx++;
+                GetComponent<DialogueTrigger>().TriggerDialogue();
                 TutorialManager.instance.hintArrows.transform.Find("arrow 03").gameObject.SetActive(false);
                 TutorialManager.instance.hintArrows.transform.Find("arrow 04").gameObject.SetActive(false);
                 TutorialManager.instance.hintArrows.transform.Find("arrow 05").gameObject.SetActive(true);
