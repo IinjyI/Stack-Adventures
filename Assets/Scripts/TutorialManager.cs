@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviour
 {
-    [SerializeField] GameObject[] tutorialPopUps;
-    public int popUpIndx;
+    [SerializeField] GameObject tutorialObjectives;
+    public GameObject hintArrows;
+    public GameObject gameHints;
+    public int objectiveIndx;
     public static TutorialManager instance;
     private void Awake()
     {
@@ -13,15 +15,15 @@ public class TutorialManager : MonoBehaviour
     }
     private void Update()
     {
-        for(int i=0;i<tutorialPopUps.Length;i++)
+        for(int i=0;i<tutorialObjectives.transform.childCount;i++)
         {
-            if(i==popUpIndx)
+            if(i== objectiveIndx)
             {
-                tutorialPopUps[i].SetActive(true);
+                tutorialObjectives.transform.GetChild(i).gameObject.SetActive(true);
             }
             else
             {
-                tutorialPopUps[i].SetActive(false);
+                tutorialObjectives.transform.GetChild(i).gameObject.SetActive(false);
             }
         }
     }

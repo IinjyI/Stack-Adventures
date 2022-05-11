@@ -22,7 +22,8 @@ public class DoorTrigger : MonoBehaviour
             if (targetStackInventory.currentSlot == 0 && !isTriggerd)
             {
                 door.OpenDoor();
-                TutorialManager.instance.popUpIndx++;
+                TutorialManager.instance.objectiveIndx++;
+                TutorialManager.instance.hintArrows.transform.Find("arrow 01").gameObject.SetActive(false);
                 isTriggerd = true;
             }
         }
@@ -31,7 +32,8 @@ public class DoorTrigger : MonoBehaviour
             if (targetStackInventory.currentSlot == 1 && !isTriggerd)
             {
                 door.OpenDoor();
-                TutorialManager.instance.popUpIndx++;
+                TutorialManager.instance.objectiveIndx++;
+                TutorialManager.instance.hintArrows.transform.Find("arrow 02").gameObject.SetActive(false);
                 isTriggerd = true;
             }
         }
@@ -40,7 +42,10 @@ public class DoorTrigger : MonoBehaviour
             if (targetStackInventory.currentSlot == 2 && !isTriggerd)
             {
                 door.OpenDoor();
-                TutorialManager.instance.popUpIndx++;
+                TutorialManager.instance.objectiveIndx++;
+                TutorialManager.instance.hintArrows.transform.Find("arrow 03").gameObject.SetActive(false);
+                TutorialManager.instance.hintArrows.transform.Find("arrow 04").gameObject.SetActive(false);
+                TutorialManager.instance.hintArrows.transform.Find("arrow 05").gameObject.SetActive(true);
                 isTriggerd = true;
             }
         }
@@ -50,7 +55,7 @@ public class DoorTrigger : MonoBehaviour
         if (doorId == DoorId.firstDoor && !isTriggerd)
         {
             door.OpenDoor();
-            //TutorialManager.instance.popUpIndx++;
+            TutorialManager.instance.gameHints.transform.Find("Moving").gameObject.SetActive(false);
             isTriggerd = true;
         }
     }
