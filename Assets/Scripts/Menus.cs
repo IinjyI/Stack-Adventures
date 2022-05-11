@@ -15,5 +15,7 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
-   public void Options(){}
+   public void Options(){
+       
+   }
 }
