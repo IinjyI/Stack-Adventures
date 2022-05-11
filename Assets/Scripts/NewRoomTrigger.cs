@@ -39,8 +39,6 @@ public class NewRoomTrigger : MonoBehaviour
             }
             else if (roomId == RoomId.FourthRoom)
             {
-                TutorialManager.instance.hintArrows.transform.Find("arrow 03").gameObject.SetActive(true);
-                TutorialManager.instance.hintArrows.transform.Find("arrow 04").gameObject.SetActive(true);
                 playerInventory.ClearInventory();
             }
             isTrigger = true;
