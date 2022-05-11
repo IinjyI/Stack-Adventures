@@ -6,12 +6,29 @@ public class Inventory : MonoBehaviour
 {
     public GameObject stackUI;
     public Stack<Item> items;
+    public int currentSlot=0;
     private void Start()
     {
         items = new Stack<Item>();
-        foreach(Transform item in stackUI.transform)
+        foreach(Transform slot in stackUI.transform)
         {
-            items.Push(item.GetComponent<Item>());
+            if (slot.childCount > 0)
+            {
+                items.Push(slot.GetChild(0).GetComponent<Item>());
+                currentSlot++;
+            }
+        }
+    }
+    public void ClearInventory()
+    {
+        items.Clear();
+        currentSlot = 0;
+        foreach (Transform slot in stackUI.transform)
+        {
+            if (slot.childCount > 0)
+            {
+                Destroy(slot.GetChild(0).gameObject);
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
 
-    public TMPro.TextMeshProUGUI nameText;
+    //public TMPro.TextMeshProUGUI nameText;
     public TMPro.TextMeshProUGUI dialogueText;
     public Animator animator;
     private Queue<string> sentences;
@@ -16,36 +16,43 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
- public void startDialogue(Dialogue dialogue){
-     nameText.text = dialogue.name;
-     animator.SetBool("IsOpen", true);
-     sentences.Clear();
-     foreach (string sentence in dialogue.sentences)
-     {
-         sentences.Enqueue(sentence);
-     }
-     displayNextSentence();
- }
+    public void StartDialogue(Dialogue dialogue)
+    {
+        //nameText.text = dialogue.name;
+        animator.SetBool("IsOpen", true);
+        Time.timeScale = 0;
+        sentences.Clear();
+        foreach (string sentence in dialogue.sentences)
+        {
+            sentences.Enqueue(sentence);
+        }
+        DisplayNextSentence();
+    }
 
- public void displayNextSentence(){
-     if (sentences.Count == 0)
-     {
-         endDialogue();
-         return;
-     }
-    string sentence = sentences.Dequeue();
-    StopAllCoroutines();
-    StartCoroutine(typeSentence(sentence));
- }
- IEnumerator typeSentence (string sentence){
-     dialogueText.text="";
-     foreach (char letter in sentence.ToCharArray()){
-         dialogueText.text+=letter;
-         yield return null;
-     }
- }
+    public void DisplayNextSentence()
+    {
+        if (sentences.Count == 0)
+        {
+            EndDialogue();
+            return;
+        }
+        string sentence = sentences.Dequeue();
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
+    }
+    IEnumerator TypeSentence(string sentence)
+    {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return null;
+        }
+    }
 
- public void endDialogue(){
-     animator.SetBool("IsOpen", false);
- }
+    public void EndDialogue()
+    {
+        animator.SetBool("IsOpen", false);
+        Time.timeScale = 1;
+    }
 }
