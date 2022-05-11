@@ -15,7 +15,5 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
-    public void HideMainMenu(){
-        gameObject.SetActive(false);
-    }
+   
 }
