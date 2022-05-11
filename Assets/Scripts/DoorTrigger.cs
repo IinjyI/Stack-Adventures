@@ -46,8 +46,7 @@ public class DoorTrigger : MonoBehaviour
                 door.OpenDoor();
                 TutorialManager.instance.objectiveIndx++;
                 GetComponent<DialogueTrigger>().TriggerDialogue();
-                TutorialManager.instance.hintArrows.transform.Find("arrow 03").gameObject.SetActive(false);
-                TutorialManager.instance.hintArrows.transform.Find("arrow 04").gameObject.SetActive(false);
+                TutorialManager.instance.GetComponent<ArrowsTrigger>().isFinshed = true;
                 TutorialManager.instance.hintArrows.transform.Find("arrow 05").gameObject.SetActive(true);
                 isTriggerd = true;
             }
