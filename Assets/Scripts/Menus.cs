@@ -10,7 +10,7 @@ public class Menus : MonoBehaviour
     
     public void NewGame(){
         PlayerPrefs.DeleteAll();
-        moveToLvl(1, "Tutorial");
+       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+ 1);
     }
 
     public void QuitGame(){
@@ -28,8 +28,5 @@ public class Menus : MonoBehaviour
     public void moveToMain(){
        SceneManager.LoadScene("Main Menu");
 }
-    public void moveToLvl(int lvl, string sceneName){
-       PlayerPrefs.SetInt("levelAt", lvl );
-       SceneManager.LoadScene(sceneName);
-}
+
 }
