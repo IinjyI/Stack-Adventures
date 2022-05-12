@@ -9,7 +9,7 @@ public class Menus : MonoBehaviour
     public AudioMixer audioMixer;
     
     public void NewGame(){
-        PlayerPrefs.DeleteAll();
+       PlayerPrefs.DeleteAll();
        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+ 1);
     }
 
