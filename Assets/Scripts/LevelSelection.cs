@@ -11,7 +11,7 @@ public class LevelSelection : MonoBehaviour
     {
         int levelAt = PlayerPrefs.GetInt("levelAt",1);
         for(int i = 0; i< lvlButtons.Length; i++){
-            lvlButtons[i].onClick.AddListener(()=>moveToLvl(i+1));
+            lvlButtons[i].onClick.AddListener(()=>moveToLvl(i));
             if(i+1 > levelAt){
                 lvlButtons[i].interactable=false;
             }
@@ -19,6 +19,6 @@ public class LevelSelection : MonoBehaviour
     }
 
     public void moveToLvl(int lvl){
-       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+lvl);
+       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+lvl+1);
 }
 }
