@@ -15,13 +15,13 @@ void Start(){
 }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        PlayerPrefs.SetInt("levelAt", nextSceneLoad );
         cutScene.Play();
         mainCamera.GetComponent<CameraController>().enabled = false;
         player.GetComponent<PlayerMovment>().enabled = false;
-        if(nextSceneLoad> PlayerPrefs.GetInt("levelAt")){
-            PlayerPrefs.SetInt("levelAt", nextSceneLoad );
 
-    }
+
+
         StartCoroutine(Waiter());
     }
     IEnumerator Waiter()

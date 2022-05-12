@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelController : MonoBehaviour
 {
@@ -33,9 +34,11 @@ public class LevelController : MonoBehaviour
                 Destroy(item.gameObject);
                 playerInventory.currentSlot--;
                 playerInventory.items.Pop();
-                if (isWin())
+                objectivesUI.GetChild(currentObjectiveIndx-1).GetComponentInChildren<Toggle>().isOn = true;
+                if (LevelWin())
                 {
-
+                    // Player finshed the level
+                    Debug.Log("Level Win");
                 }
             }
             else
@@ -53,7 +56,7 @@ public class LevelController : MonoBehaviour
             //Debug.Log(objectivesUI.GetChild(i).name);
         }
     }
-    private bool isWin()
+    private bool LevelWin()
     {
         return currentObjectiveIndx == levelObjectives.Length;
     }
