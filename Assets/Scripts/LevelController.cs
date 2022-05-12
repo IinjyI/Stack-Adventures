@@ -10,6 +10,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Transform objectivesUI;
     private int currentObjectiveIndx=0;
     private bool inRange;
+    public int nextSceneLoad;
     private void Start()
     {
         AddUIObjectives();
