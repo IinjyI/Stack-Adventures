@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1594169435424171740}
   - component: {fileID: 5792135136432522631}
   m_Layer: 5
-  m_Name: DarkBlueData 1
+  m_Name: DarkBlueData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
