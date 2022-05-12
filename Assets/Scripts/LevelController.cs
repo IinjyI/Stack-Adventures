@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
@@ -10,9 +11,11 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Transform objectivesUI;
     private int currentObjectiveIndx=0;
     private bool inRange;
+    public int nextSceneLoad;
     private void Start()
     {
         AddUIObjectives();
+        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
     }
     private void Update()
     {
@@ -39,6 +42,7 @@ public class LevelController : MonoBehaviour
                 {
                     // Player finshed the level
                     Debug.Log("Level Win");
+                    PlayerPrefs.SetInt("levelAt", nextSceneLoad );
                 }
             }
             else
