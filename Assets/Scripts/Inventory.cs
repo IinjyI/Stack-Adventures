@@ -5,16 +5,18 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public GameObject stackUI;
-    public Stack<Item> items;
+    public Stack<DataItem> items;
     public int currentSlot=0;
+    public int slotsCount=0;
     private void Start()
     {
-        items = new Stack<Item>();
+        items = new Stack<DataItem>();
         foreach(Transform slot in stackUI.transform)
         {
+            slotsCount++;
             if (slot.childCount > 0)
             {
-                items.Push(slot.GetChild(0).GetComponent<Item>());
+                items.Push(slot.GetChild(0).GetComponent<DataItem>());
                 currentSlot++;
             }
         }
