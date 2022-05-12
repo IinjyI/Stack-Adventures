@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7583509422276328949}
   - component: {fileID: 7583509422276328947}
   - component: {fileID: 7583509422276328946}
-  - component: {fileID: 8365247308914002711}
+  - component: {fileID: -5906899328919396231}
   m_Layer: 5
   m_Name: PurpleData
   m_TagString: Untagged
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8365247308914002711
+--- !u!114 &-5906899328919396231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,8 +86,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7583509422276328948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 059b341d5e9a6274387d6ba44b283074, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d4ac476952456444acb782fde9bd182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemColor: 5
-  icon: {fileID: 21300000, guid: cdad2c20ec7aaa345b45e60efb61a358, type: 3}
+  item: {fileID: 11400000, guid: 76e1cf71807e8b747a265b4e07bae28c, type: 2}
