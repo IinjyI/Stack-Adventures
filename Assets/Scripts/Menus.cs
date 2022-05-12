@@ -28,5 +28,10 @@ public class Menus : MonoBehaviour
     public void moveToMain(){
        SceneManager.LoadScene("Main Menu");
 }
-
+    public void pause(){
+        Time.timeScale=0f;
+}
+    public void resume(){
+        Time.timeScale=1f;
+}
 }
