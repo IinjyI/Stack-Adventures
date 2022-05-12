@@ -6,20 +6,30 @@ using UnityEngine.Audio;
 
 public class Menus : MonoBehaviour
 {
-    public void NewGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    public AudioMixer audioMixer;
+    
+    public void NewGame(){
+        PlayerPrefs.DeleteAll();
+        moveToLvl(1, "Tutorial");
     }
 
-    public void QuitGame()
-    {
+    public void QuitGame(){
         Application.Quit();
     }
-      public AudioMixer audioMixer;
-   public void setVolume(float volume){
+
+    public void setVolume(float volume){
        audioMixer.SetFloat("volume", volume);
    }
-   public void setFullScreen(bool isFullScreen){
+
+    public void setFullScreen(bool isFullScreen){
        Screen.fullScreen=isFullScreen;
    }
+
+    public void moveToMain(){
+       SceneManager.LoadScene("Main Menu");
+}
+    public void moveToLvl(int lvl, string sceneName){
+       PlayerPrefs.SetInt("levelAt", lvl );
+       SceneManager.LoadScene(sceneName);
+}
 }
