@@ -8,14 +8,9 @@ public class Menus : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void LoadLevel(){
-        
-    }
+
     public void QuitGame()
     {
         Application.Quit();
     }
-   public void Options(){
-       
-   }
 }
