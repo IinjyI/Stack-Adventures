@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelController : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class LevelController : MonoBehaviour
                 Destroy(item.gameObject);
                 playerInventory.currentSlot--;
                 playerInventory.items.Pop();
+                objectivesUI.GetChild(currentObjectiveIndx-1).GetComponentInChildren<Toggle>().isOn = true;
                 if (isWin())
                 {
 

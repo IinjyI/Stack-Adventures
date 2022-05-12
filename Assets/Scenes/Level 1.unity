@@ -11577,9 +11577,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 1004648298}
   levelObjectives:
-  - {fileID: 11400000, guid: 508c6d10590a1cb4ba69c9770c37bf8b, type: 2}
-  - {fileID: 11400000, guid: b6b8cb1a29637c84d8a16b46f22ef230, type: 2}
-  - {fileID: 11400000, guid: 7a6fa27fb17a4824e80172967bad647c, type: 2}
+  - {fileID: 1010513200585230516, guid: e96da88a2d3ef9948ac88f3d726eb101, type: 3}
+  - {fileID: 2659533061676736462, guid: a4b5c983e661368459d38274a14a6af0, type: 3}
   objectivesUI: {fileID: 935270180}
 --- !u!1001 &842399132
 PrefabInstance:
@@ -11943,7 +11942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 55, y: -33.100037}
+  m_AnchoredPosition: {x: 55, y: -33.099976}
   m_SizeDelta: {x: 88.039, y: 262.472}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &935270181
