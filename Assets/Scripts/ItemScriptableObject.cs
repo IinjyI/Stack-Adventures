@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Item : MonoBehaviour
+[CreateAssetMenu(fileName = "ItemObject", menuName = "ScriptableObjects/ItemObject")]
+public class ItemScriptableObject : ScriptableObject
 {
     public ItemColor itemColor;
     public enum ItemColor{

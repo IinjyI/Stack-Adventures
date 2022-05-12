@@ -26,17 +26,20 @@ public class PushPop : MonoBehaviour
     {
         if (playerInventory.items.Count > 0)
         {
-            // Item to push into the Target stack
-            var item = playerInventory.stackUI.transform.GetChild(playerInventory.currentSlot-1).transform.GetChild(0);
-            // Instantiate the item to the Target stack's UI
-            Instantiate(item, stackInventory.stackUI.transform.GetChild(stackInventory.currentSlot));
-            stackInventory.currentSlot++;
-            // Destroying the item from the player's UI
-            Destroy(item.gameObject);
-            playerInventory.currentSlot--;
-            // Adding the item to the Target stack inventory, Removing it from the player's inventory
-            stackInventory.items.Push(playerInventory.items.Pop());
-            pushSound.Play();
+            if (stackInventory.items.Count < stackInventory.slotsCount)
+            {
+                // Item to push into the Target stack
+                var item = playerInventory.stackUI.transform.GetChild(playerInventory.currentSlot - 1).transform.GetChild(0);
+                // Instantiate the item to the Target stack's UI
+                Instantiate(item, stackInventory.stackUI.transform.GetChild(stackInventory.currentSlot));
+                stackInventory.currentSlot++;
+                // Destroying the item from the player's UI
+                Destroy(item.gameObject);
+                playerInventory.currentSlot--;
+                // Adding the item to the Target stack inventory, Removing it from the player's inventory
+                stackInventory.items.Push(playerInventory.items.Pop());
+                pushSound.Play();
+            }
         }
     }
     private void PopItem()
