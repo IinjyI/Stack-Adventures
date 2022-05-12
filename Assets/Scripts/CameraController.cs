@@ -16,9 +16,5 @@ public class CameraController : MonoBehaviour
          ref velocity, speed);
 
     }
-    public void moveToRoom(Transform _newRoom)
-    {
-        float currentPosY = _newRoom.position.y;
-
-    }
+   
 }
