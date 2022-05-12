@@ -313,6 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc4fa9af76c8d3348a0f75a98ca4e833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 0}
 --- !u!114 &107402027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4924,7 +4925,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1661308239}
-        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: Menus, Assembly-CSharp
         m_MethodName: setVolume
         m_Mode: 0
         m_Arguments:
@@ -5187,7 +5188,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1661308234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b8ed4c8565ea494586bf13850bf5969, type: 3}
+  m_Script: {fileID: 11500000, guid: dc4fa9af76c8d3348a0f75a98ca4e833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: e0c5a09c5dae6f54b9e83e6afcb506f4, type: 2}
@@ -5964,7 +5965,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1661308239}
-        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: Menus, Assembly-CSharp
         m_MethodName: setFullScreen
         m_Mode: 0
         m_Arguments:
