@@ -13,6 +13,7 @@ public class LevelController : MonoBehaviour
     private void Start()
     {
         AddUIObjectives();
+        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
     }
     private void Update()
     {
@@ -39,6 +40,7 @@ public class LevelController : MonoBehaviour
                 {
                     // Player finshed the level
                     Debug.Log("Level Win");
+                    PlayerPrefs.SetInt("levelAt", nextSceneLoad );
                 }
             }
             else
