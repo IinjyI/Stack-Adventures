@@ -11,6 +11,7 @@ public class Menus : MonoBehaviour
     public void NewGame(){
        PlayerPrefs.DeleteAll();
        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+ 1);
+       resume();
     }
 
     public void QuitGame(){
