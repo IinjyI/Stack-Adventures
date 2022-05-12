@@ -38166,6 +38166,7 @@ MonoBehaviour:
   cutScene: {fileID: 1420619931}
   mainCamera: {fileID: 1785718246}
   player: {fileID: 1420619921}
+  nextSceneLoad: 2
 --- !u!61 &1242288264
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60315,7 +60316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 511.27, y: 243.1}
+  m_AnchoredPosition: {x: 511.26996, y: 243.1}
   m_SizeDelta: {x: -1022.547, y: -602.396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1854651995
