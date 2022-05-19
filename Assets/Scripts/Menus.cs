@@ -12,6 +12,7 @@ public class Menus : MonoBehaviour
        PlayerPrefs.DeleteAll();
        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+ 1);
        resume();
+       
     }
 
     public void QuitGame(){
@@ -28,6 +29,8 @@ public class Menus : MonoBehaviour
 
     public void moveToMain(){
        SceneManager.LoadScene("Main Menu");
+       Time.timeScale=1f;
+
 }
     public void pause(){
         Time.timeScale=0f;
