@@ -38,4 +38,8 @@ public class Menus : MonoBehaviour
     public void resume(){
         Time.timeScale=1f;
 }
+    public void restart(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale=1f;
+}
 }
