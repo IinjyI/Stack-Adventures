@@ -25,7 +25,7 @@ https://user-images.githubusercontent.com/90464702/169497850-5f8b7f6f-1f80-4e87-
 
 <a href= "https://youtu.be/bZyHA2-LEeg" terget="_blank"> Full quality video </a>
 
-<a href="https://drive.google.com/file/d/1Ygdfmd5aEokbPmCAgotCfopLh_Fw3NoG/view?usp=sharing" target="_blank"> Download The Game (windows) </a>
+<a href="https://drive.google.com/drive/folders/1VRubp4UYLgty6HwvwZP-bpEwS2vlF22b?usp=sharing" target="_blank"> Download The Game (windows) </a>
 ###### PS: you need to download the whole .zip archive then extract it in order for the game to run 
  
 <b>By:</b>
