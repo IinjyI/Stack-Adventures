@@ -6,7 +6,7 @@ public class PushPop : MonoBehaviour
 {
     private Inventory playerInventory;
     private Inventory stackInventory;
-    [SerializeField] public AudioSource pushSound, popSound;
+    [SerializeField] private AudioSource pushSound, popSound;
     private void Start()
     {
         playerInventory = GetComponent<Inventory>();

@@ -9,6 +9,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Inventory playerInventory;
     [SerializeField] private GameObject[] levelObjectives;
     [SerializeField] private Transform objectivesUI;
+    [SerializeField] private AudioSource sucessPush, wrongPush;
     private int currentObjectiveIndx=0;
     private bool inRange;
     public int nextSceneLoad;
@@ -38,6 +39,7 @@ public class LevelController : MonoBehaviour
                 playerInventory.currentSlot--;
                 playerInventory.items.Pop();
                 objectivesUI.GetChild(currentObjectiveIndx-1).GetComponentInChildren<Toggle>().isOn = true;
+                sucessPush.Play();
                 if (LevelWin())
                 {
                     // Player finshed the level
@@ -48,7 +50,7 @@ public class LevelController : MonoBehaviour
             else
             {
                 // Wrong Target Push
-
+                wrongPush.Play();
             }
         }
     }

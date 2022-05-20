@@ -13937,6 +13937,8 @@ MonoBehaviour:
   levelObjectives:
   - {fileID: 1010513200585230516, guid: e96da88a2d3ef9948ac88f3d726eb101, type: 3}
   objectivesUI: {fileID: 935270180}
+  sucessPush: {fileID: 1405400799}
+  wrongPush: {fileID: 1405400798}
   nextSceneLoad: 0
 --- !u!1 &875851492
 GameObject:
