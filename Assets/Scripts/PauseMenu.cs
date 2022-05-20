@@ -1,15 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    private GameObject pauseMenu;
-    private GameObject darken;
-    private GameObject optionsMenu;
-    void Start()
-    {
-     public AudioMixer audioMixer;
     private Canvas pauseMenu;
     private Canvas optionsMenu;
     private Image darken;
@@ -27,7 +22,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.enabled && !optionsMenu.enabled)
         {
-            Pause();
+            Time.timeScale = 0f;
             pauseMenu.enabled = true;
             darken.enabled = true;
         }
@@ -41,8 +36,8 @@ public class PauseMenu : MonoBehaviour
             optionsMenu.enabled = false;
             pauseMenu.enabled = false;
             darken.enabled = false;
-            Resume();
+            Time.timeScale = 1f;
         }
     }
 }
-}
+

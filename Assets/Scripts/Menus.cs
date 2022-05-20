@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Menus : MonoBehaviour
 {
-   
+        public AudioMixer audioMixer;
 
     public void NewGame()
     {
