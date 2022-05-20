@@ -7,35 +7,7 @@ using UnityEngine.Audio;
 public class Menus : MonoBehaviour
 {
     public AudioMixer audioMixer;
-    private GameObject pauseMenu;
-    private GameObject darken;
-    private GameObject optionsMenu;
-    void Start()
-    {
-        pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
-        darken = GameObject.FindGameObjectWithTag("Darken");
-        optionsMenu = GameObject.FindGameObjectWithTag("OptionsMenu");
-        pauseMenu.SetActive(false);
-        darken.SetActive(false);
-        optionsMenu.SetActive(false);
 
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.activeSelf)
-        {
-            Pause();
-            pauseMenu.SetActive(true);
-            darken.SetActive(true);
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeSelf)
-        {
-            optionsMenu.SetActive(false);
-            pauseMenu.SetActive(false);
-            darken.SetActive(false);
-            Resume();
-        }
-    }
 
     public void NewGame()
     {

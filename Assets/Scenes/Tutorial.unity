@@ -36092,6 +36092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 647254240}
   - component: {fileID: 647254239}
+  - component: {fileID: 647254241}
   m_Layer: 0
   m_Name: Menu
   m_TagString: Untagged
@@ -36134,6 +36135,18 @@ RectTransform:
   m_AnchoredPosition: {x: 997, y: 296}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &647254241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647254237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1b5c9b4ab3f4d4ba8d16cad7872157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &656824198
 GameObject:
   m_ObjectHideFlags: 0
@@ -38724,7 +38737,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 647254239}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: restart
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -62187,7 +62200,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 647254239}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: resume
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -62883,8 +62896,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 647254239}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: setFullScreen
-        m_Mode: 0
+        m_MethodName: SetFullScreen
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -62979,12 +62992,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   player: {fileID: 1420619930}
-  roomOneMinPosition: {x: 0.5, y: -0.2}
-  roomOneMaxPosition: {x: 16.2, y: 10.1}
-  roomTwoMinPosition: {x: 0, y: 0}
-  roomTwoMaxPosition: {x: 0, y: 0}
-  maxPosition: {x: 0, y: 0}
-  minPosition: {x: 0, y: 0}
 --- !u!20 &1785718251
 Camera:
   m_ObjectHideFlags: 0
@@ -63839,7 +63846,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 647254239}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: moveToMain
+        m_MethodName: MoveToMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
