@@ -3879,7 +3879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff734e1f576946a4b892b7097adf88ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1004648304}
   minPosition: {x: -2.4, y: -3.4}
   maxPosition: {x: 4.3, y: 6.3}
   smooth: 1
@@ -21556,6 +21556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1719740504}
   - component: {fileID: 1719740505}
+  - component: {fileID: 1719740506}
   m_Layer: 0
   m_Name: Menu
   m_TagString: Untagged
@@ -21599,6 +21600,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: e0c5a09c5dae6f54b9e83e6afcb506f4, type: 2}
+--- !u!114 &1719740506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719740503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1b5c9b4ab3f4d4ba8d16cad7872157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1742147179
 GameObject:
   m_ObjectHideFlags: 0
