@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorTrigger : MonoBehaviour
 {
@@ -48,6 +49,8 @@ public class DoorTrigger : MonoBehaviour
                 GetComponent<DialogueTrigger>().TriggerDialogue();
                 TutorialManager.instance.GetComponent<ArrowsTrigger>().isFinshed = true;
                 TutorialManager.instance.hintArrows.transform.Find("arrow 05").gameObject.SetActive(true);
+                int nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
+                PlayerPrefs.SetInt("levelAt", nextSceneLoad);
                 isTriggerd = true;
             }
         }
