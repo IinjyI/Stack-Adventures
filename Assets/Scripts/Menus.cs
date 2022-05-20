@@ -10,28 +10,25 @@ public class Menus : MonoBehaviour
     private GameObject pauseMenu;
     private GameObject darken;
     private GameObject optionsMenu;
-    private bool isPaused = false;
     void Start()
     {
         pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
         darken = GameObject.FindGameObjectWithTag("Darken");
         optionsMenu = GameObject.FindGameObjectWithTag("OptionsMenu");
-        if (pauseMenu != null)
-        {
-            pauseMenu.SetActive(false);
-            darken.SetActive(false);
-            optionsMenu.SetActive(false);
-        }
+        pauseMenu.SetActive(false);
+        darken.SetActive(false);
+        optionsMenu.SetActive(false);
+
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+        if (Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.activeSelf)
         {
             Pause();
             pauseMenu.SetActive(true);
             darken.SetActive(true);
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
+        else if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeSelf)
         {
             optionsMenu.SetActive(false);
             pauseMenu.SetActive(false);
@@ -71,12 +68,10 @@ public class Menus : MonoBehaviour
     public void Pause()
     {
         Time.timeScale = 0f;
-        isPaused = true;
     }
     public void Resume()
     {
         Time.timeScale = 1f;
-        isPaused = false;
     }
     public void Restart()
     {
