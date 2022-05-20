@@ -31,7 +31,7 @@ public class Menus : MonoBehaviour
             pauseMenu.SetActive(true);
             darken.SetActive(true);
         }
-        if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
         {
             optionsMenu.SetActive(false);
             pauseMenu.SetActive(false);
