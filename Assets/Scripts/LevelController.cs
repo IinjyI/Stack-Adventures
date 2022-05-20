@@ -12,11 +12,12 @@ public class LevelController : MonoBehaviour
     [SerializeField] private AudioSource sucessPush, wrongPush;
     private int currentObjectiveIndx=0;
     private bool inRange;
-    public int nextSceneLoad;
-    private void Start()
+    GameObject winMenu, darken;
+    private void Awake()
     {
         AddUIObjectives();
-        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
+        darken = GameObject.FindGameObjectWithTag("Darken");
+        winMenu = GameObject.FindGameObjectWithTag("WinMenu");
     }
     private void Update()
     {
@@ -43,8 +44,9 @@ public class LevelController : MonoBehaviour
                 if (LevelWin())
                 {
                     // Player finshed the level
-                    Debug.Log("Level Win");
-                    PlayerPrefs.SetInt("levelAt", nextSceneLoad );
+                    darken.GetComponent<Image>().enabled = true;
+                    winMenu.GetComponent<Canvas>().enabled = true;
+                    Time.timeScale = 0;
                 }
             }
             else
@@ -71,6 +73,7 @@ public class LevelController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             inRange = true;
+            collision.transform.Find("UICanvasPush").GetComponent<Canvas>().enabled = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -78,6 +81,7 @@ public class LevelController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             inRange = false;
+            collision.transform.Find("UICanvasPush").GetComponent<Canvas>().enabled = false;
         }
     }
 }

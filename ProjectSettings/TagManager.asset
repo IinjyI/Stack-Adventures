@@ -13,6 +13,7 @@ TagManager:
   - PauseMenu
   - Darken
   - OptionsMenu
+  - WinMenu
   layers:
   - Default
   - TransparentFX
