@@ -25,12 +25,12 @@
 https://user-images.githubusercontent.com/90464702/169497850-5f8b7f6f-1f80-4e87-84c7-1a3323b29d19.mp4
 
 
-<a href="https://drive.google.com/file/d/1zdbi41zzGWbNgUjSWQ-Slqvkz5XF-eA8/view?usp=sharing"> Download </a>
+<a href="https://drive.google.com/file/d/1zdbi41zzGWbNgUjSWQ-Slqvkz5XF-eA8/view?usp=sharing" target="_blank"> Download </a>
  
 <b>By:</b>
 <ul>
-<li><em><a href="https://github.com/AhmedAsaad72">Ahmed Asaad</a></em></li>
-<li><em><a href="https://github.com/A7madhatem">Ahmed Hatem</a></em></li>
-<li><em><a href="https://github.com/PrinceEGY">Ahmed Mohsen</a></em></li>
-<li><em><a href="https://github.com/mercury-i">Injy E. ElSherbini</a></em></li>
+<li><em><a href="https://github.com/AhmedAsaad72" target="_blank">Ahmed Asaad</a></em></li>
+<li><em><a href="https://github.com/A7madhatem" target="_blank">Ahmed Hatem</a></em></li>
+<li><em><a href="https://github.com/PrinceEGY" target="_blank">Ahmed Mohsen</a></em></li>
+<li><em><a href="https://github.com/mercury-i" target="_blank">Injy E. ElSherbini</a></em></li>
 </ul>
