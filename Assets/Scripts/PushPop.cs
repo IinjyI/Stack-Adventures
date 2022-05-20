@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PushPop : MonoBehaviour
 {
     private Inventory playerInventory;
     private Inventory stackInventory;
     [SerializeField] private AudioSource pushSound, popSound;
+    private GameObject objectivePanel;
     private void Start()
     {
         playerInventory = GetComponent<Inventory>();
+        objectivePanel = GameObject.FindGameObjectWithTag("ObjectivePanel");
     }
     private void Update()
     {
@@ -74,6 +77,7 @@ public class PushPop : MonoBehaviour
             stackInventory = collision.GetComponent<Inventory>();
             collision.transform.Find("UICanvas").GetComponent<Canvas>().enabled = true;
             transform.Find("UICanvas").GetComponent<Canvas>().enabled = true;
+            objectivePanel.SetActive(false);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -83,6 +87,7 @@ public class PushPop : MonoBehaviour
             collision.transform.Find("UICanvas").GetComponent<Canvas>().enabled = false;
             transform.Find("UICanvas").GetComponent<Canvas>().enabled = false;
             stackInventory = null;
+            objectivePanel.SetActive(true);
         }
     }
 }
