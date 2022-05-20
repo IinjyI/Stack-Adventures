@@ -18,8 +18,8 @@
 ---
 <b>By:</b>
 <ul>
-<li><em>Ahmed Asaad</em></li>
-<li><em>Ahmed Hatem</em></li>
+<li><em><a href="https://github.com/AhmedAsaad72">Ahmed Asaad</a></em></li>
+<li><em><a href="https://github.com/A7madhatem">Ahmed Hatem</a></em></li>
 <li><em><a href="https://github.com/PrinceEGY">Ahmed Mohsen</a></em></li>
 <li><em><a href="https://github.com/mercury-i">Injy E. ElSherbini</a></em></li>
 </ul>
