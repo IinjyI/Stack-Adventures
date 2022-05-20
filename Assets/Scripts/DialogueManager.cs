@@ -10,15 +10,23 @@ public class DialogueManager : MonoBehaviour
     public TMPro.TextMeshProUGUI dialogueText;
     public Animator animator;
     private Queue<string> sentences;
+    bool isActive;
 
     void Start()
     {
         sentences = new Queue<string>();
     }
-
+    private void Update()
+    {
+        if(isActive&&(Input.GetKeyDown(KeyCode.KeypadEnter)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Return)))
+        {
+            GameObject.FindGameObjectWithTag("ContinueButton").GetComponent<Button>().onClick.Invoke();
+        }
+    }
     public void StartDialogue(Dialogue dialogue)
     {
         //nameText.text = dialogue.name;
+        isActive = true;
         animator.SetBool("IsOpen", true);
         Time.timeScale = 0;
         sentences.Clear();
@@ -34,6 +42,7 @@ public class DialogueManager : MonoBehaviour
         if (sentences.Count == 0)
         {
             EndDialogue();
+            isActive = false;
             return;
         }
         string sentence = sentences.Dequeue();
