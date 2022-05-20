@@ -17,14 +17,15 @@
 ###### <em>To be continued...</em>
 ---
 
-## Game SnapShots:
+## SnapShots:
 
  <img width="50" height="50" alt="logo" src="https://user-images.githubusercontent.com/90464702/169497336-82aded02-f0db-4015-bcb5-7b3059202af6.png">
  
 https://user-images.githubusercontent.com/90464702/169497850-5f8b7f6f-1f80-4e87-84c7-1a3323b29d19.mp4
 
+< href= "https://youtu.be/bZyHA2-LEeg" terget="_blank"> Full quality video </a>
 
-<a href="https://drive.google.com/file/d/1zdbi41zzGWbNgUjSWQ-Slqvkz5XF-eA8/view?usp=sharing" target="_blank"> Download The Game </a>
+<a href="https://drive.google.com/file/d/1zdbi41zzGWbNgUjSWQ-Slqvkz5XF-eA8/view?usp=sharing" target="_blank"> Download The Game (windows) </a>
 ###### PS: you need to download the whole .rar archive then extract it in order for the game to run 
  
 <b>By:</b>
