@@ -25,7 +25,7 @@
 https://user-images.githubusercontent.com/90464702/169497850-5f8b7f6f-1f80-4e87-84c7-1a3323b29d19.mp4
 
 
-<a href="https://drive.google.com/file/d/1zdbi41zzGWbNgUjSWQ-Slqvkz5XF-eA8/view?usp=sharing" target="_blank"> Download </a>
+<a href="https://drive.google.com/file/d/1zdbi41zzGWbNgUjSWQ-Slqvkz5XF-eA8/view?usp=sharing" target="_blank"> Download The Game </a>
  
 <b>By:</b>
 <ul>
