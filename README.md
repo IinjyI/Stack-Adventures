@@ -1,12 +1,13 @@
-# Stack-Adventures
+# Stack-Adventures <img width="50" height="50" alt="logo" src="https://user-images.githubusercontent.com/90464702/169497336-82aded02-f0db-4015-bcb5-7b3059202af6.png">
 
 ## Our Goal:
->### Make learning data structures more fun (with "Rebo" the robot!).
+>### Make learning data structures more fun (with "Rebo" the robot!). 
 
 ## Important Guidelines:
 
 + #### Keep your code clean.
 + #### Stick to the color palette specified previously.
++ 
 
 ## Game Scenario:
 <dl>
@@ -18,8 +19,13 @@
 ---
 
 ## Game SnapShots
-<video src='https://www.youtube.com/watch?v=jq6qlPhshvs' width=180/>
 
+
+https://user-images.githubusercontent.com/90464702/169497850-5f8b7f6f-1f80-4e87-84c7-1a3323b29d19.mp4
+
+
+<a href="https://drive.google.com/file/d/1zdbi41zzGWbNgUjSWQ-Slqvkz5XF-eA8/view?usp=sharing"> Download </a>
+ 
 <b>By:</b>
 <ul>
 <li><em><a href="https://github.com/AhmedAsaad72">Ahmed Asaad</a></em></li>
