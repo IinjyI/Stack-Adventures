@@ -21,5 +21,5 @@
 <li><em>Ahmed Asaad</em></li>
 <li><em>Ahmed Hatem</em></li>
 <li><em>Ahmed Mohsen</em></li>
-<li><em>[Injy E. ElSherbini] (https://github.com/mercury-i)</em></li>
+<li><em><a href="https://github.com/mercury-i">Injy E. ElSherbini</a></em></li>
 </ul>
