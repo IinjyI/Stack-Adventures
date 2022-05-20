@@ -7,7 +7,6 @@
 
 + #### Keep your code clean.
 + #### Stick to the color palette specified previously.
-+ 
 
 ## Game Scenario:
 <dl>
