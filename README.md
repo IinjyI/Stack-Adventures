@@ -23,9 +23,9 @@
  
 https://user-images.githubusercontent.com/90464702/169497850-5f8b7f6f-1f80-4e87-84c7-1a3323b29d19.mp4
 
-< href= "https://youtu.be/bZyHA2-LEeg" terget="_blank"> Full quality video </a>
+<a href= "https://youtu.be/bZyHA2-LEeg" terget="_blank"> Full quality video </a>
 
-<a href="https://drive.google.com/file/d/1zdbi41zzGWbNgUjSWQ-Slqvkz5XF-eA8/view?usp=sharing" target="_blank"> Download The Game (windows) </a>
+<a href="https://drive.google.com/file/d/1Ygdfmd5aEokbPmCAgotCfopLh_Fw3NoG/view?usp=sharing" target="_blank"> Download The Game (windows) </a>
 ###### PS: you need to download the whole .rar archive then extract it in order for the game to run 
  
 <b>By:</b>
