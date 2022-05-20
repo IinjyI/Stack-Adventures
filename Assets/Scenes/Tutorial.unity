@@ -32286,8 +32286,8 @@ MonoBehaviour:
     - In this room there are two stacks, the first one is to the right of the room
       and contains 2 data items, and the other one to the left of the room and is
       empty
-    - Move the data items from the right stack by removing them (pop) and adding
-      them to the left stack (push) one by one.
+    - Move the data items from the right stack by removing them (POP) and adding
+      them to the left stack (PUSH) one by one.
 --- !u!1 &155645198
 GameObject:
   m_ObjectHideFlags: 0
@@ -34300,7 +34300,7 @@ MonoBehaviour:
     sentences:
     - As you see, the item has been removed from your inventory and added to the
       top of the stack
-    - This operation of adding an item to the stack is known as (push), remember
+    - This operation of adding an item to the stack is known as (PUSH), remember
       it well too!
 --- !u!1 &440226972
 GameObject:
@@ -36843,7 +36843,7 @@ MonoBehaviour:
     sentences:
     - Congratulation! You've finshed the tutorial
     - Now you know how the stack works and the most two common operations of the
-      stack ("push" and "pop")
+      stack ("PUSH" and "POP")
 --- !u!1 &759853192
 GameObject:
   m_ObjectHideFlags: 0
@@ -39167,7 +39167,7 @@ MonoBehaviour:
     sentences:
     - As you see, the item on the top of the stack has been removed and moved to
       your inventory in the top left of the screen
-    - This operation of removing an item from the stack is known as (pop), remember
+    - This operation of removing an item from the stack is known as (POP), remember
       it well!
 --- !u!1 &1038565782
 GameObject:
@@ -62045,8 +62045,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: In this room there is a stack, try to get near it and press "E" to add
-    the item you just picked in your inventory to the stack.
+  m_text: Move the data items from the right stack by removing them (POP) and adding
+    them to the left stack (PUSH) one by one.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

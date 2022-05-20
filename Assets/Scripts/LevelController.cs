@@ -46,6 +46,8 @@ public class LevelController : MonoBehaviour
                     // Player finshed the level
                     darken.GetComponent<Image>().enabled = true;
                     winMenu.GetComponent<Canvas>().enabled = true;
+                    int nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
+                    PlayerPrefs.SetInt("levelAt", nextSceneLoad);
                     Time.timeScale = 0;
                 }
             }
