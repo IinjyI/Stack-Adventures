@@ -6502,7 +6502,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1932551367}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
         m_MethodName: SetFullScreen
-        m_Mode: 6
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
