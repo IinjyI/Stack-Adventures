@@ -771,7 +771,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 107402026}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: resume
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1742,7 +1742,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 107402026}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: resume
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3072,7 +3072,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 107402026}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: resume
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5931,7 +5931,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1661308239}
         m_TargetAssemblyTypeName: Menus, Assembly-CSharp
-        m_MethodName: setFullScreen
+        m_MethodName: SetFullScreen
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
