@@ -10,60 +10,74 @@ public class Menus : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject darken;
     public GameObject optionsMenu;
-    void Start(){
-        pauseMenu = GameObject.FindWithTag("PauseMenu");
+    private bool isPaused = false;
+    void Start()
+    {
+        //pauseMenu = GameObject.FindWithTag("PauseMenu");
         pauseMenu.SetActive(false);
-        darken = GameObject.FindWithTag("Darken");
+        //darken = GameObject.FindWithTag("Darken");
         darken.SetActive(false);
-        optionsMenu= GameObject.FindWithTag("OptionsMenu");
+        //optionsMenu = GameObject.FindWithTag("OptionsMenu");
         optionsMenu.SetActive(false);
     }
-    void Update(){
-        if(Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.activeSelf){
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+        {
+            Pause();
             pauseMenu.SetActive(true);
             darken.SetActive(true);
-            pause();
         }
-         if(Input.GetKeyDown(KeyCode.Escape) &&( pauseMenu.activeSelf || optionsMenu.activeSelf)){
+        if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
+        {
             optionsMenu.SetActive(false);
             pauseMenu.SetActive(false);
             darken.SetActive(false);
-            resume();
+            Resume();
         }
     }
 
-    public void NewGame(){
-       PlayerPrefs.DeleteAll();
-       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+ 1);
-       resume();
-       
+    public void NewGame()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Resume();
     }
 
-    public void QuitGame(){
+    public void QuitGame()
+    {
         Application.Quit();
     }
 
-    public void setVolume(float volume){
-       audioMixer.SetFloat("volume", volume);
-   }
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("volume", volume);
+    }
 
-    public void setFullScreen(bool isFullScreen){
-       Screen.fullScreen=isFullScreen;
-   }
+    public void SetFullScreen(bool isFullScreen)
+    {
+        Screen.fullScreen = isFullScreen;
+    }
 
-    public void moveToMain(){
-       SceneManager.LoadScene("Main Menu");
-       Time.timeScale=1f;
+    public void MoveToMain()
+    {
+        SceneManager.LoadScene("Main Menu");
+        Time.timeScale = 1f;
 
-}
-    public void pause(){
-        Time.timeScale=0f;
-}
-    public void resume(){
-        Time.timeScale=1f;
-}
-    public void restart(){
+    }
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
+    public void Restart()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale=1f;
-}
+        Time.timeScale = 1f;
+    }
 }
