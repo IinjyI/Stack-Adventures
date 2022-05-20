@@ -34302,6 +34302,11 @@ MonoBehaviour:
       top of the stack
     - This operation of adding an item to the stack is known as (PUSH), remember
       it well too!
+    - 'This way of adding or removing the items from only one end is known as (LIFO)
+      Last-In-First-Out
+
+      Which as it states the last item added will be the
+      first item to remove.'
 --- !u!1 &440226972
 GameObject:
   m_ObjectHideFlags: 0
@@ -62045,8 +62050,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Move the data items from the right stack by removing them (POP) and adding
-    them to the left stack (PUSH) one by one.
+  m_text: 'This way of adding or removing the items from only one end is known as
+    (LIFO) Last-In-First-Out
+
+    Which as it states the last item added will be
+    the first item to remove.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -65479,7 +65487,7 @@ GameObject:
   - component: {fileID: 1995185439}
   m_Layer: 0
   m_Name: ContinueButton
-  m_TagString: Untagged
+  m_TagString: ContinueButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65518,7 +65526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}

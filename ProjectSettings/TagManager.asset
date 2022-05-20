@@ -15,6 +15,7 @@ TagManager:
   - OptionsMenu
   - WinMenu
   - ObjectivePanel
+  - ContinueButton
   layers:
   - Default
   - TransparentFX
